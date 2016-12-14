@@ -19,4 +19,10 @@ public class Dagger implements Item {
    public void create() {
       System.out.println("Dagger");
    }
+   
+   @Override
+    public String toString() {
+        return "Dagger";
+    }
+   
 }

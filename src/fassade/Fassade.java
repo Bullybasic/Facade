@@ -2,6 +2,7 @@
  * Diese Klasse ist die Main-Klasse. 
  */
 package fassade;
+import java.util.Scanner;
 
 /**
  * Es wird ein Objekt der Klasse Master, Lehrling und Ritter instanziert. 
@@ -11,6 +12,8 @@ package fassade;
 public class Fassade {
    public static void main(String[] args) {
      
+      Scanner scanner = new Scanner(System.in);
+       
       Master master = new Master();
       Trainee trainee = new Trainee(master);
       Knight knight = new Knight(master);
@@ -34,5 +37,19 @@ public class Fassade {
       System.out.println("");
       System.out.println("Weapons");
       System.out.println(master.getSizeArray());
+      
+      System.out.println("");
+      master.checkArrayList();
+      
+      System.out.println("");
+      master.sellItem("Sword");
+      
+      System.out.println("");
+      master.checkArrayList();
+      
+      System.out.print("Enter the name of the Item you want to buy:");
+      String name = scanner.nextLine();
+      master.sellItem(name);
+      System.out.println("End");
    }
 }

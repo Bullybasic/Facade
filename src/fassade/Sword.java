@@ -19,4 +19,10 @@ public class Sword implements Item {
    public void create() {
       System.out.println("Sword");
    }
+
+    @Override
+    public String toString() {
+        return "Sword";
+    }
+    
 }

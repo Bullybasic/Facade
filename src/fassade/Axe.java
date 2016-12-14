@@ -21,4 +21,9 @@ public class Axe implements Item {
    public void create() {
       System.out.println("Axe");
    }
+   
+   @Override
+    public String toString() {
+        return "Axe";
+    }
 }

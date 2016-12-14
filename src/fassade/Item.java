@@ -6,4 +6,5 @@ package fassade;
 
 public interface Item {
    void create();
+   
 }
